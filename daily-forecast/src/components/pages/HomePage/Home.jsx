@@ -63,17 +63,23 @@ const HomeComponent = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  const API_KEY = 'c7ed991d123440e0935f5ce6e37b7818';
+  const API_KEY = 'bf623e8ccba74e7f9bbd822149b32985';
   
   const fetchArticles = async (category) => {
     try {
       const response = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${API_KEY}`
+//         https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=bf623e8ccba74e7f9bbd822149b32985
+//         `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=${API_KEY}`
+// `https://newsapi.org/v2/top-headlines?country=in&category=buisness&apiKey=bf623e8ccba74e7f9bbd822149b32985`
+
+`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
+
       );
       const data = await response.json();
       switch (category) {
         case 'business':
           setBusinessState(data.articles);
+         
           break;
         case 'entertainment':
           setEntertainmentState(data.articles);

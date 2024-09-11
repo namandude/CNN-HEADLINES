@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 export const BASE_URL = 'https://newsapi.org/v2/';
-const API_KEY = 'c7ed991d123440e0935f5ce6e37b7818';
+const API_KEY = 'bf623e8ccba74e7f9bbd822149b32985';
 
 export const api = axios.create({
   baseURL: BASE_URL,

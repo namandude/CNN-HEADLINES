@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import { NewsAppContext } from './NewsAppContext';
 
-const API_KEY = 'c7ed991d123440e0935f5ce6e37b7818';
+const API_KEY = 'bf623e8ccba74e7f9bbd822149b32985';
 const BASE_URL = `https://newsapi.org/v2/top-headlines?`;
 
 export const NewsAppProvider = ({ children }) => {
@@ -26,7 +26,7 @@ export const NewsAppProvider = ({ children }) => {
         return response.data;
       })
       .catch(error => {
-        // handle error
+    
         console.log(error);
       });
   };
